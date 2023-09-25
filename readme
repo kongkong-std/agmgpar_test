@@ -1,0 +1,15 @@
+1. 我仿照 Example_par.f90 写了 test_example_par.c 程序.
+经调试后, test_example_par.c 程序已经可以正常执行. 但我这里对
+ifirstlistrank和listrank这两个变量不理解, 只是按照fotran程序
+对listrank开辟了内存, 我不太确定这个处理是否合理. 这个疑问还是需要
+解答...
+
+2. 后面处理方式我计划通过文件io读入线性系统, 矩阵是csr格式进行存储,
+这里有两个疑问:
+    2.1. 并行矩阵划分, 这里是不是需要写个程序处理矩阵划分, 再将划分好
+    的矩阵文件输出, 通过parmetis划分？
+    
+    2.2. 还是需要搞明白ifirstlistrank和listrank这两个变量意义, 然后
+    才能编写好, 我现在不知道如何通过文件io读入线性系统后, 如何编写
+    ifirstlistrank和listrank, 解决这个问题后, 就可以编写调用agmgpar()
+    的程序了
